@@ -23,7 +23,7 @@ start_client_kb_reply = ReplyKeyboardMarkup(resize_keyboard=True).add(KeyboardBu
 start_client_kb_reply.row(KeyboardButton('💲Кошелек'),KeyboardButton('👁️‍🗨️Профиль'))
 start_client_kb_reply.add(KeyboardButton('🗄️Дополнительно🗄️'))
 start_client_kb_inline = InlineKeyboardMarkup().add(InlineKeyboardButton('Соглашение📝', url=link_soglash))
-start_menu_message = '🎇Добро пожаловать в *VEGAS* _casino bot_\!'
+start_menu_message = '🎇Добро пожаловать в *GAS* _casino_\!'
 
 
 
@@ -81,7 +81,7 @@ end_promo_kb_inline = InlineKeyboardMarkup().add(InlineKeyboardButton('➕Соз
 end_promo_kb_inline.row(InlineKeyboardButton('🔙В меню', callback_data='return_wallet'))
 
 
-addmoney_message = f'➕Выберите удобный способ автоматического пополнения\n🔝Минимальная сумма депозита: 5💲\nНе нашли нужного способа?\n[Обратитесь к нам](https://t.me/lasvegas_support)\!'
+addmoney_message = f'➕Выберите удобный способ автоматического пополнения\n🔝Минимальная сумма депозита: 5💲\nНе нашли нужного способа?\n[Обратитесь к нам]({link_support})\!'
 addmoney_client_kb_inline = InlineKeyboardMarkup().add(InlineKeyboardButton('🤖Banker ', callback_data='btc_bankir'))
 addmoney_client_kb_inline.row(InlineKeyboardButton('🤖BitPapa', callback_data='bitpapa'),InlineKeyboardButton('🤖CryptoBot', callback_data='cryptobot'))
 addmoney_client_kb_inline.add(InlineKeyboardButton('🔛Прямой криптоперевод', callback_data='to_crypto'))
@@ -90,7 +90,7 @@ addmoney_client_kb_inline.add(InlineKeyboardButton('🔙В меню', callback_d
 
 
 
-list_crypto_message = '👁️‍🗨️Выберите токен в котором вам удобно совершить перевод:\nНе нашли нужного токена?\n[Обратитесь к нам](https://t.me/lasvegas_support)\!'
+list_crypto_message = '👁️‍🗨️Выберите токен в котором вам удобно совершить перевод:\nНе нашли нужного токена?\n[Обратитесь к нам]({link_support})\!'
 list_crypto_kb_inline = InlineKeyboardMarkup().row(InlineKeyboardButton('🪙BTC', callback_data='btc_to'),InlineKeyboardButton('🪙ETH', callback_data='eth_to'))
 list_crypto_kb_inline.row(InlineKeyboardButton('🪙TRX', callback_data='trx_to'),InlineKeyboardButton('🪙USDT(TRC-20)', callback_data='usdt_to'))
 list_crypto_kb_inline.add(InlineKeyboardButton('🔦Назад', callback_data='return_change_add'))
@@ -169,7 +169,7 @@ chat_multigame_message = '''⭐️ *Здесь вы можете войти в �
 💣*Создать публичную игру можно только в нашем чате\.*
 🥷🏻*Создать приватную игру можно только здесь\.*
 
-🕶[процесс входа, создания комнат](t.me/lasvegas_info_14)'''
+🕶[процесс входа, создания комнат]({link_video_create_room})'''
 
 menu_game_message = '''🎆 *LAS VEGAS MENU* 🎆'''
 menu_game_kb_inline = InlineKeyboardMarkup().row(InlineKeyboardButton('🎳⚽MINI GAMES🎯🏀', callback_data='minigames'))
@@ -199,12 +199,12 @@ error_value_stavka_message = '''❗️*Пожалуйста, введите су
 
 
 game_message_id = {
-    14: '''⚜️Выигрыши в боулинге🎳\n\n💢Сбил все кегли: *_3X_*\n♨️Сбил 5 кеглей: возврат ставки в *полном размере*\n🤯Сбил всё 5 раз подряд: *_50Х_*\n\n[гарантии честности](https://telegra.ph/Kak-my-garantiruem-istinnuyu-sluchajnost-ishodov-igr-12-04)\n\n*Пришлите стикер* `🎳` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
-    15: '''⚜️Выигрыши в футболе⚽\n\n👉👌Попал: *_1\.5X_*\n🤯Забил гол 10 раз подряд: *_50Х_*\n\n[гарантии честности](https://telegra.ph/Kak-my-garantiruem-istinnuyu-sluchajnost-ishodov-igr-12-04)\n\n*Пришлите стикер* `⚽` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
-    16: '''⚜️Выигрыши в дартс🎯\n\n⭐️Попал в центр: *_3X_*\n🌟Попал в белое кольцо возле центра: возврат ставки в *полном размере*\n🤯Попал в центр 5 раз подряд: *_50Х_*\n\n[гарантии честности](https://telegra.ph/Kak-my-garantiruem-istinnuyu-sluchajnost-ishodov-igr-12-04)\n\n*Пришлите стикер* `🎯` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
-    17: '''⚜️Выигрыши в баскетболе🏀\n\n👉👌Попал: *_1\.5X_*\n🤯Закинул мяч 10 раз подряд: *_100Х_*\n\n[гарантии честности](https://telegra.ph/Kak-my-garantiruem-istinnuyu-sluchajnost-ishodov-igr-12-04)\n\n*Пришлите стикер* `🏀` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
-    21: '''⚜️Выигрыши в дайсе🎲\n\n💡Угадал выпавшее число: *_3Х_*\n🕯️Выпало одно из соседних чисел: возврат *половины ставки*\n🤯Угадал число 5 раз подряд: *_50Х_*\n⚡️_У тройки, например, соседними числами считаются двойка и четверка, у единицы\-двойка и шестерка, у шестерки\-единица и пятерка и т\.д\._\n\n[гарантии честности](https://telegra.ph/Kak-my-garantiruem-istinnuyu-sluchajnost-ishodov-igr-12-04)\n\nВы загадали:*_ {} _* \n *Пришлите стикер* `🎲` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
-    20: '''⚜️Комбинации и выигрыши:\n\n❤️‍🔥Три семерки: *_7X_*\n❤️Три любых предмета в ряд: *_3X_*\n❣️Две семерки на любых позициях: *_2X_*\n❣️Два лимона рядом: *_2X_*\n🤯Три семерки 2 раза подряд: *_50Х_*\n\n[гарантии честности](https://telegra.ph/Kak-my-garantiruem-istinnuyu-sluchajnost-ishodov-igr-12-04)\n❓[подробнее о комбинациях и позициях](https://telegra.ph/WinRate-SLOTS-12-02)\n\n*Пришлите стикер* `🎰` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲'''
+    14: '''⚜️Выигрыши в боулинге🎳\n\n💢Сбил все кегли: *_3X_*\n♨️Сбил 5 кеглей: возврат ставки в *полном размере*\n🤯Сбил всё 5 раз подряд: *_50Х_*\n\n[гарантии честности]({link_garant})\n\n*Пришлите стикер* `🎳` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
+    15: '''⚜️Выигрыши в футболе⚽\n\n👉👌Попал: *_1\.5X_*\n🤯Забил гол 10 раз подряд: *_50Х_*\n\n[гарантии честности]({link_garant})\n\n*Пришлите стикер* `⚽` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
+    16: '''⚜️Выигрыши в дартс🎯\n\n⭐️Попал в центр: *_3X_*\n🌟Попал в белое кольцо возле центра: возврат ставки в *полном размере*\n🤯Попал в центр 5 раз подряд: *_50Х_*\n\n[гарантии честности]({link_garant})\n\n*Пришлите стикер* `🎯` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
+    17: '''⚜️Выигрыши в баскетболе🏀\n\n👉👌Попал: *_1\.5X_*\n🤯Закинул мяч 10 раз подряд: *_100Х_*\n\n[гарантии честности]({link_garant})\n\n*Пришлите стикер* `🏀` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
+    21: '''⚜️Выигрыши в дайсе🎲\n\n💡Угадал выпавшее число: *_3Х_*\n🕯️Выпало одно из соседних чисел: возврат *половины ставки*\n🤯Угадал число 5 раз подряд: *_50Х_*\n⚡️_У тройки, например, соседними числами считаются двойка и четверка, у единицы\-двойка и шестерка, у шестерки\-единица и пятерка и т\.д\._\n\n[гарантии честности]({link_garant})\n\nВы загадали:*_ {} _* \n *Пришлите стикер* `🎲` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲''',
+    20: '''⚜️Комбинации и выигрыши:\n\n❤️‍🔥Три семерки: *_7X_*\n❤️Три любых предмета в ряд: *_3X_*\n❣️Две семерки на любых позициях: *_2X_*\n❣️Два лимона рядом: *_2X_*\n🤯Три семерки 2 раза подряд: *_50Х_*\n\n[гарантии честности]({link_garant})\n❓[подробнее о комбинациях и позициях]({link_slots})\n\n*Пришлите стикер* `🎰` *\(клик чтобы скопировать\) боту*\n💰Ваша ставка:  {}💲'''
 }
 minigame_kb_inline = InlineKeyboardMarkup().add(InlineKeyboardButton('✖️Отменить игру', callback_data='cancel_game'))
 
@@ -243,7 +243,7 @@ or21_game_menu_message = '''❗️*У вас есть незаконченная
 or21_game_kb_inline = InlineKeyboardMarkup().row(InlineKeyboardButton('✔️Да', callback_data='true_leave_21'),InlineKeyboardButton('✖️Нет', callback_data='false_leave_21'))
 
 
-menu_21_message = '🤍*21*🤍 in *VEGAS*'
+menu_21_message = '🤍*21*🤍 in *GAS*'
 
 
 public_21_message = '💘 *Выберите комнату\.*'
@@ -389,7 +389,7 @@ dep_ref_message = 'Зафиксирован депозит вашего рефе
 
 need_ot_message = 'В соответствии с пунктом 3\.2 [пользовательского соглашения]({link_soglash}) для вывода *вам нужно отыграть еще {}*💲'
 
-withdraw_menu_message = '''🎆 *LAS VEGAS WITHDRAW* 🎆\n*_Минимальный размер вывода: 5_*💲'''
+withdraw_menu_message = '''🎆 *GAS WITHDRAW* 🎆\n*_Минимальный размер вывода: 5_*💲'''
 withdraw_menu_kb_inline = InlineKeyboardMarkup().row(InlineKeyboardButton('🟠QIWI', callback_data=f'qiwi_withdraw_method'), InlineKeyboardButton('🟣ЮMoney', callback_data=f'yoomoney_withdraw_method')).row(InlineKeyboardButton('🏦 Банк.Карта', callback_data=f'bank_withdraw_method')).row(InlineKeyboardButton('💵USDT(TRC-20)', callback_data=f'usdt_withdraw_method'), InlineKeyboardButton('🪙BITCOIN', callback_data=f'bitcoin_withdraw_method'), InlineKeyboardButton('🪙TRX(Tron)', callback_data=f'trx_withdraw_method')).row(InlineKeyboardButton('🤖 BitPapa', callback_data=f'bitpapa_withdraw_method'), InlineKeyboardButton('🤖CryptoBot', callback_data=f'cryptobot_withdraw_method'), InlineKeyboardButton('🤖BTCBanker', callback_data=f'banker_withdraw_method'))
 withdraw_return_kb_inline = InlineKeyboardMarkup().add(InlineKeyboardButton('🔙В меню', callback_data='return_wallet'))
 withdraw_error_message = 'В соответствии с пунктом 3\.2 [пользовательского соглашения]({link_soglash}) для вывода *вам нужно отыграть еще {}*💲'
@@ -397,7 +397,7 @@ withdraw_address_message = '*Введите реквизиты\(адрес/но�
 withdraw_value_message = '*Введите сумму вывода\.*'
 withdraw_end_message = f'✅ *Заявка принята в обработку\.\nОбычно исполнение запроса занимает до 30 минут\.*\n🌒 В ночное время запросы не обрабатываются\. Если возникнет потребность в *отмене* заявки \- вы можете обратиться в [службу поддержки]({link_support})\.'
 
-start_chat_message = '💸Добро пожаловать в VEGAS\n*Ваш профиль записан в базу бота*\.\nДля доступа к функционалу бота *требуется* [авторизоваться]({link_bot})'
+start_chat_message = '💸Добро пожаловать в GAS\n*Ваш профиль записан в базу бота*\.\nДля доступа к функционалу бота *требуется* [авторизоваться]({link_bot})'
 
 request_withdraw_post = '⭕️Заявка на вывод:\n*Кто:* `{}`   `{}`\n*Сумма:* `{}$`\n*Тип:* `{}`\n*Адрес:* `{}`\n*Последний депозит:* `{}`$\n*Остаток на балансе:* `{}$`\n*Сколько он выиграл у казино, чем число меньше, тем для нас лучше:* `{}$`'
 qiwi_notwork_message = '⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️\n *Киви не ворк*\n_требуется проверить кошелёк_\n⭕️⭕️⭕️⭕️⭕️⭕️⭕️⭕️\n'
@@ -445,7 +445,7 @@ rb_message = '''♠️*RB*♥️         \#RB{}
 
 
 
-reklama_message = '✅*Вам начислен приветственный бонус в размере 0\.2💲🍾*\n🍀 Удачной игры\!'
+reklama_message = '✅*Вам начислен приветственный бонус в размере 20💲🍾*\n🍀 Удачной игры\!'
 
 
 coming_soon_message = '''⚙️*В Покере ведутся технические работы до 17 января включительно\.*\nВход в игру недоступен\.\n\nВернемся к вам с улучшенной, удобной системой торгов, интуитивно понятным интерфейсом и любовью\.'''
